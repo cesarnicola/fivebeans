@@ -316,23 +316,16 @@ If the *action* is "success" or null or undefined, the job is deleted. If it is 
 Here's a simple handler example.
 
 ```javascript
-module.exports = function()
-{
-    function EmitKeysHandler()
-    {
-        this.type = 'emitkeys';
-    }
+module.exports = {
+    type: 'emitkeys',
 
-    EmitKeysHandler.prototype.work = function(payload, callback)
+    work: function(payload, callback)
     {
         var keys = Object.keys(payload);
         for (var i = 0; i < keys.length; i++)
             console.log(keys[i]);
         callback('success');
     }
-
-    var handler = new EmitKeysHandler();
-    return handler;
 };
 ```
 
