@@ -311,7 +311,7 @@ __jobdata__: job payload
 __action__: 'success' | 'release' | 'bury' | custom error message  
 __delay__: seconds to delay if the job is released; otherwise unused
 
-If the *action* is "success", the job is deleted. If it is "release", the job is released with the specified delay. If it is "bury", the job is buried. All other actions are treated as errors & the job is buried in response.
+If the *action* is "success" or null or undefined, the job is deleted. If it is "release", the job is released with the specified delay. If it is "bury", the job is buried. All other actions are treated as errors & the job is buried in response.
 
 Here's a simple handler example.
 
