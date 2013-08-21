@@ -366,6 +366,8 @@ runner.go();
 
 The second parameter may either be an object containing the configuration or the path name of a YAML file that contains the configuration.
 
+If the second parameter is an object the actual handlers may optionally be passed instead of a list of filenames
+
 ### bin/beanworker
 
 The above code plus [optimist](https://github.com/substack/node-optimist) wrapped in a node shell script for your convenience.
