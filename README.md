@@ -364,6 +364,8 @@ var runner = new fivebeans.runner('worker_id_1', '/path/to/config.yml');
 runner.go();
 ```
 
+The second parameter may either be an object containing the configuration or the path name of a YAML file that contains the configuration.
+
 ### bin/beanworker
 
 The above code plus [optimist](https://github.com/substack/node-optimist) wrapped in a node shell script for your convenience.
