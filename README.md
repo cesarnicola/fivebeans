@@ -286,6 +286,8 @@ Some errors might have additional fields providing context, such as a job id.
 
 `job.buried`: The worker has buried a job. The payload is the job id.
 
+`job.timedOut`: The job is about to time out.  This is an independent Javascript timer so it is not guaranteed to fire before the internal beanstalkd timer does, but it's probably "good enough".
+
 ### Jobs
 
 Each job must be a JSON-serialized object with two fields:
